@@ -1,0 +1,15 @@
+{
+  "name": "news-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "server": "json-server --watch data.json --port 3000"
+  },
+  "author": "xurshid",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
+}

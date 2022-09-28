@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="">
+    <title>Pages</title>
+  </head>
+  <body>
+    <div class="wrapper"></div>
+	<h1 class="page-title"></h1>
+	<style>
+		img{
+			object-fit: cover;
+			width: 700px !important;
+		}
+		p{
+			text-align: center;
+			width: 700px;
+		}
+		.wrapper{
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+	</style>
+    <script>
+		let page = document.querySelector('.page-title')
+		let wrapper = document.querySelector('.wrapper')
+		let remove = document.querySelector('.btn')
+		
+      	fetch(`http://localhost:3000/posts/${localStorage.getItem('id')}`)
+        .then((r) => r.json())
+        .then((data) => post(data));
+
+      function post(data) {
+			let titlePost = document.createElement('h1')
+			let photoPost =document.createElement('img')
+			let descriptionsOne = document.createElement('p')
+			let photoOne =document.createElement('img')
+			let descriptionsTwo = document.createElement('p')
+			let photoTwo =document.createElement('img')
+			let descriptionsThree = document.createElement('p')
+			titlePost.innerText = data.titlePost
+			photoPost.setAttribute('src', data.photoPost)
+			descriptionsOne.innerText = data.descriptionsOne
+			photoOne.setAttribute('src', data.photoOne)
+			descriptionsTwo.innerText = data.descriptionsTwo
+			photoTwo.setAttribute('src', data.photoTwo)
+			descriptionsThree.innerText = data.descriptionsThree
+			wrapper.append(titlePost)
+			wrapper.append(photoPost)
+			wrapper.append(descriptionsOne)
+			wrapper.append(photoOne)
+			wrapper.append(descriptionsTwo)
+			wrapper.append(photoTwo)
+			wrapper.append(descriptionsThree)
+
+      }
+    </script>
+  </body>
+</html>

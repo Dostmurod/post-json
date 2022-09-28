@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add post</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .form {
+    width: 800px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+  }
+
+  .form input {
+    width: 600px;
+    padding: 20px;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+
+  button {
+    width: 300px;
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: teal;
+    color: #fff;
+    cursor: pointer;
+
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  textarea {
+    width: 600px;
+  }
+
+  input {
+    width: 600px !important;
+  }
+
+</style>
+
+<body>
+  <div class="form">
+    <input type="text" placeholder="titlePost" />
+    <textarea cols="78" rows="10" placeholder="shortdescriptionsPost"></textarea>
+    <input type="url" name="" id="" placeholder="photoPost" />
+    <textarea cols="78" rows="10" placeholder="descriptionsOne"></textarea>
+    <input type="url" name="" id="" placeholder="photoOne" />
+    <textarea cols="78" rows="10" placeholder="descriptionsTwo"></textarea>
+    <input type="url" name="" id="" placeholder="photoTwo" />
+    <textarea cols="78" rows="10" placeholder="descriptionsThree"></textarea>
+    <button class="send"> send </button>
+    <a href="./index.html">Bosh Saxifaga qaytish</a>
+  </div>
+
+  <script>
+    let inputs = document.querySelectorAll('input');
+    let textarea = document.querySelectorAll('textarea');
+    let send = document.querySelector('.send');
+
+
+
+    send.addEventListener('click', () => {
+      let dataPost = {
+        titlePost: inputs[0].value,
+        shortdescriptionsPost: textarea[0].value,
+        photoPost: inputs[1].value,
+        descriptionsOne: textarea[1].value,
+        photoOne: inputs[2].value,
+        descriptionsTwo: textarea[2].value,
+        photoTwo: inputs[3].value,
+        descriptionsThree: textarea[3].value,
+      };
+
+      fetch('http://localhost:3000/posts', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dataPost)
+      })
+
+
+    });
+  </script>
+</body>
+
+</html>

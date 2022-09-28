@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "titlePost": "Saudiya Arabistoni haj va umra ishlari vaziri O‘zbekistonga keldi (foto)",
+      "shortdescriptionsPost": "Saudiya Arabistoni podshohligi haj va umra ishlari vaziri Tavfiq bin Favzon ar-Rabia boshchiligidagi delegatsiya 27-sentabr kuni O‘zbekistonga tashrif buyurdi. Bu haqda Musulmonlar idorasi axborot xizmati xabar berdi.",
+      "photoPost": "https://daryo.uz/cache/2022/09/30-6-1280x853.jpg",
+      "descriptionsOne": "Mazkur tashrifdan asosiy maqsad O‘zbekiston va Saudiya Arabistoni Podshohligi o‘rtasidagi hamkorlik munosabatlarini takomillashtirish, ayniqsa, diniy-ma’rifiy, ilmiy-tadqiqot, turizm, transport sohasidagi aloqalarni mustahkamlashga qaratilgan.",
+      "photoOne": "https://daryo.uz/cache/2022/09/32-5-1280x853.jpg",
+      "descriptionsTwo": "Saudiya Arabistoni delegatsiyasi vakillari mamlakatga tashrifi davomida O‘zbekiston musulmonlari idorasi, Din ishlari bo‘yicha qo‘mita, manfaatdor vazirlik va idoralar rahbarlari bilan muzokaralar o‘tkazish nazarda tutilgan.\n\n",
+      "photoTwo": "https://daryo.uz/cache/2022/09/31-6-1280x853.jpg",
+      "descriptionsThree": "",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
